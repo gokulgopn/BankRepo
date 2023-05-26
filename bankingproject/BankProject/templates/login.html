@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+<head>
+  <title>Login</title>
+
+</head>
+<body>
+<form action="http://127.0.0.1:8000/register/new" method="post">
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="Enter your username"><br>
+  <input type="password" name="password" placeholder="Enter your password"><br>
+  <button type="submit">Submit</button><br>
+
+  <a class="btn btn-primary" href="{% url 'BankApp1:register' %}" role="link">Click here to Register</a>
+</form>
+</body>
+</html>
